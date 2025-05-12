@@ -3,18 +3,20 @@ function manageBorders() {
     const topBorder = document.querySelector('.top-border');
     const bottomBorder = document.querySelector('.bottom-border');
     
-    // Hide top border when scrolled down
-    if (window.scrollY > 50) {
+    // Calculate scroll position
+    const scrollPosition = window.scrollY;
+    const documentHeight = document.documentElement.scrollHeight;
+    const windowHeight = window.innerHeight;
+
+    // Hide top border when scrolled down slightly
+    if (scrollPosition > 50) {
         topBorder.classList.add('hidden');
     } else {
         topBorder.classList.remove('hidden');
     }
     
-    // Show bottom border when near the end of the page
-    const scrollPosition = window.innerHeight + window.scrollY;
-    const documentHeight = document.documentElement.scrollHeight;
-    
-    if (scrollPosition >= documentHeight - 200) { // 200px from the bottom
+    // Show bottom border only when very close to the bottom of the page
+    if (scrollPosition + windowHeight >= documentHeight - 100) { // 100px from the bottom
         bottomBorder.classList.add('visible');
     } else {
         bottomBorder.classList.remove('visible');
@@ -24,5 +26,5 @@ function manageBorders() {
 // Add scroll event listener
 window.addEventListener('scroll', manageBorders);
 
-// Also check on page load
+// Check on page load
 document.addEventListener('DOMContentLoaded', manageBorders);

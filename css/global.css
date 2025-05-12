@@ -2,7 +2,7 @@
 body {
     font-family: 'Arimo', sans-serif;
     position: relative;
-    background-color: #EEE9E5; /* Accent color from Tailwind config */
+    background-color: white; /* White background */
 }
 
 .font-heading {
@@ -15,6 +15,8 @@ body {
     position: relative;
     z-index: 10;
     padding-top: 3rem; /* Add padding to prevent content from going under top border */
+    padding-bottom: 3rem; /* Add padding to prevent content from going under bottom border */
+    background-color: white; /* White background for content */
 }
 
 .top-border {
@@ -25,8 +27,9 @@ body {
     height: 3rem;
     background-repeat: repeat-x;
     background-image: url('../public/images/top-border.png');
-    z-index: 50;
+    z-index: 100; /* Increased z-index to ensure visibility */
     transition: opacity 0.3s ease;
+    pointer-events: none;
 }
 
 .top-border.hidden {
@@ -35,24 +38,26 @@ body {
 
 .side-border-left {
     position: fixed;
-    top: 3rem;
-    bottom: 3rem;
+    top: 0;
+    bottom: 0;
     left: 0;
     width: 2rem;
     background-repeat: repeat-y;
     background-image: url('../public/images/side-border.png');
-    z-index: 40;
+    z-index: 90; /* Adjusted z-index */
+    pointer-events: none;
 }
 
 .side-border-right {
     position: fixed;
-    top: 3rem;
-    bottom: 3rem;
+    top: 0;
+    bottom: 0;
     right: 0;
     width: 2rem;
     background-repeat: repeat-y;
     background-image: url('../public/images/side-border.png');
-    z-index: 40;
+    z-index: 90; /* Adjusted z-index */
+    pointer-events: none;
 }
 
 .bottom-border {
@@ -64,11 +69,18 @@ body {
     background-repeat: repeat-x;
     background-image: url('../public/images/top-border.png');
     transform: rotate(180deg);
-    z-index: 50;
+    z-index: 100; /* Increased z-index to ensure visibility */
     opacity: 0;
     transition: opacity 0.3s ease;
+    pointer-events: none;
 }
 
 .bottom-border.visible {
     opacity: 1;
+}
+
+/* Ensure content does not go behind borders */
+main {
+    position: relative;
+    z-index: 50;
 }

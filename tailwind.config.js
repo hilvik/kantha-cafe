@@ -4,12 +4,12 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        heading: ['"Playfair Display"', 'serif'], // Tropikal-like fallback
+        heading: ['"Playfair Display"', 'serif'],
         body: ['"Arimo"', 'sans-serif'],
       },
       colors: {
         primary: '#1C0F13', // dark text
-        accent: '#EEE9E5',  // background
+        accent: 'white',    // Changed to white
       },
     },
   },

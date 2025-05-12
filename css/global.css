@@ -1,0 +1,74 @@
+/* Global Styles for Kantha Kafe */
+body {
+    font-family: 'Arimo', sans-serif;
+    position: relative;
+    background-color: #EEE9E5; /* Accent color from Tailwind config */
+}
+
+.font-heading {
+    font-family: 'Playfair Display', serif;
+}
+
+.content-wrapper {
+    max-width: calc(100% - 4rem); /* Subtract side border widths */
+    margin: 0 auto;
+    position: relative;
+    z-index: 10;
+    padding-top: 3rem; /* Add padding to prevent content from going under top border */
+}
+
+.top-border {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3rem;
+    background-repeat: repeat-x;
+    background-image: url('../public/images/top-border.png');
+    z-index: 50;
+    transition: opacity 0.3s ease;
+}
+
+.top-border.hidden {
+    opacity: 0;
+}
+
+.side-border-left {
+    position: fixed;
+    top: 3rem;
+    bottom: 3rem;
+    left: 0;
+    width: 2rem;
+    background-repeat: repeat-y;
+    background-image: url('../public/images/side-border.png');
+    z-index: 40;
+}
+
+.side-border-right {
+    position: fixed;
+    top: 3rem;
+    bottom: 3rem;
+    right: 0;
+    width: 2rem;
+    background-repeat: repeat-y;
+    background-image: url('../public/images/side-border.png');
+    z-index: 40;
+}
+
+.bottom-border {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3rem;
+    background-repeat: repeat-x;
+    background-image: url('../public/images/top-border.png');
+    transform: rotate(180deg);
+    z-index: 50;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.bottom-border.visible {
+    opacity: 1;
+}

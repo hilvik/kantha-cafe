@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Kantha Kafe</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom Tailwind Config -->
+    <script src="js/tailwind.config.js"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="css/global.css">
+</head>
+<body class="bg-accent min-h-screen relative">
+    <!-- Border -->
+    <div id="border" class="fixed inset-0 pointer-events-none z-0">
+        <!-- Imported border component will be placed here -->
+    </div>
+
+    <!-- Wrapper to position content within borders -->
+    <div class="content-wrapper">
+        <!-- Header -->
+        <header id="header" class="relative z-20">
+            <!-- Imported header component will be placed here -->
+        </header>
+
+        <main class="px-4 py-10">
+            <div class="max-w-7xl mx-auto">
+                <!-- Title -->
+                <div class="text-center mb-12">
+                    <h1 class="font-heading text-4xl md:text-5xl text-primary mb-4">
+                        THE KANTHA KAFE
+                    </h1>
+                </div>
+
+                <!-- About Us Section -->
+                <section class="mb-16">
+                    <h2 class="font-heading text-3xl text-primary mb-8 text-center">About Us</h2>
+                    <div class="grid md:grid-cols-2 gap-8 items-center">
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <p class="font-body text-primary leading-relaxed">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet consectetur 
+                                adipiscing elit. Amet consectetur adipiscing elit. Amet consectetur adipiscing 
+                                elit. Consectetur adipiscing elit. Amet consectetur adipiscing elit. Amet 
+                                consectetur adipiscing elit.
+                            </p>
+                            <button class="mt-4 bg-primary text-accent px-4 py-2 rounded hover:opacity-80 transition">
+                                Learn More
+                            </button>
+                        </div>
+                        <img 
+                            src="public/images/side-border.png" 
+                            alt="Kantha Kafe About" 
+                            class="w-full h-80 object-cover rounded-lg"
+                        />
+                    </div>
+                </section>
+
+                <!-- Menu Section -->
+                <section class="mb-16">
+                    <h2 class="font-heading text-3xl text-primary mb-8 text-center">Menu</h2>
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                            <img 
+                                src="public/images/top-border.png" 
+                                alt="Menu Item 1" 
+                                class="w-full h-64 object-cover"
+                            />
+                        </div>
+                        <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                            <img 
+                                src="public/images/top-border.png" 
+                                alt="Menu Item 2" 
+                                class="w-full h-64 object-cover"
+                            />
+                        </div>
+                        <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                            <img 
+                                src="public/images/top-border.png" 
+                                alt="Menu Item 3" 
+                                class="w-full h-64 object-cover"
+                            />
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Shop the Craft Section -->
+                <section class="mb-16">
+                    <h2 class="font-heading text-3xl text-primary mb-8 text-center">Shop the Craft</h2>
+                    <div class="grid md:grid-cols-4 gap-6">
+                        <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                            <img 
+                                src="public/images/side-border.png" 
+                                alt="Craft Item 1" 
+                                class="w-full h-80 object-cover"
+                            />
+                        </div>
+                        <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                            <img 
+                                src="public/images/side-border.png" 
+                                alt="Craft Item 2" 
+                                class="w-full h-80 object-cover"
+                            />
+                        </div>
+                        <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                            <img 
+                                src="public/images/side-border.png" 
+                                alt="Craft Item 3" 
+                                class="w-full h-80 object-cover"
+                            />
+                        </div>
+                        <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                            <img 
+                                src="public/images/side-border.png" 
+                                alt="Craft Item 4" 
+                                class="w-full h-80 object-cover"
+                            />
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Join Our Workshop Section -->
+                <section class="mb-16">
+                    <h2 class="font-heading text-3xl text-primary mb-8 text-center">Join Our Workshop</h2>
+                    <div class="grid md:grid-cols-2 gap-8 items-center">
+                        <img 
+                            src="public/images/top-border.png" 
+                            alt="Workshop" 
+                            class="w-full h-80 object-cover rounded-lg"
+                        />
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <p class="font-body text-primary leading-relaxed mb-4">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet consectetur 
+                                adipiscing elit. Amet consectetur adipiscing elit. Amet consectetur adipiscing 
+                                elit. Consectetur adipiscing elit.
+                            </p>
+                            <button class="bg-primary text-accent px-4 py-2 rounded hover:opacity-80 transition">
+                                Book Now
+                            </button>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Meet the Artisans Section -->
+                <section>
+                    <h2 class="font-heading text-3xl text-primary mb-8 text-center">Meet the Artisans</h2>
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <img 
+                            src="public/images/top-border.png" 
+                            alt="Artisans" 
+                            class="w-full h-96 object-cover rounded-lg mb-6"
+                        />
+                        <p class="font-body text-primary leading-relaxed">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet consectetur 
+                            adipiscing elit. Amet consectetur adipiscing elit. Amet consectetur adipiscing 
+                            elit. Consectetur adipiscing elit. Amet consectetur adipiscing elit.
+                        </p>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer id="footer" class="relative z-20">
+            <!-- Imported footer component will be placed here -->
+        </footer>
+    </div>
+
+    <!-- JavaScript to Import Components and Manage Borders -->
+    <script src="js/main.js"></script>
+    <script src="js/border.js"></script>
+</body>
+</html>

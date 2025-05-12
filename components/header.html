@@ -1,0 +1,35 @@
+<!-- components/Header.html -->
+<header class="relative z-20 bg-white">
+  <!-- Top Border (already part of Border.html, so skip if reused) -->
+  <!-- <div class="w-full h-12 bg-repeat-x" style="background-image: url('/images/top-border.png');"></div> -->
+
+  <div class="flex items-center justify-between px-6 py-4">
+    <!-- Logo or Site Name -->
+    <h1 class="text-xl font-bold text-black">THE KANTHA KAFE</h1>
+
+    <!-- Navigation Links -->
+    <nav class="flex space-x-6 text-sm font-medium text-black">
+      <a href="/" class="hover:text-gray-600">Home</a>
+      <a href="/menu" class="hover:text-gray-600">Menu</a>
+      <a href="/about" class="hover:text-gray-600">About Us</a>
+      <a href="/contact" class="hover:text-gray-600">Contact</a>
+      <a href="/ambience" class="hover:text-gray-600">Ambience</a>
+    </nav>
+
+    <!-- Icons (Search + Cart) -->
+    <div class="flex space-x-4 items-center">
+      <!-- Search Icon -->
+      <button aria-label="Search">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35M16.65 16.65a7 7 0 11-9.9-9.9 7 7 0 019.9 9.9z"/>
+        </svg>
+      </button>
+      <!-- Cart Icon -->
+      <button aria-label="Cart">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.35 2.7a1 1 0 00.9 1.5H19m-12 0a1 1 0 100 2 1 1 0 000-2zm10 0a1 1 0 100 2 1 1 0 000-2z"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+</header>

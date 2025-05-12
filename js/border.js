@@ -26,5 +26,14 @@ function manageBorders() {
 // Add scroll event listener
 window.addEventListener('scroll', manageBorders);
 
-// Check on page load
-document.addEventListener('DOMContentLoaded', manageBorders);
+// Ensure borders are visible on initial page load
+document.addEventListener('DOMContentLoaded', function() {
+    // Make sure top border is visible initially (remove any 'hidden' class that might be there)
+    const topBorder = document.querySelector('.top-border');
+    if (topBorder) {
+        topBorder.classList.remove('hidden');
+    }
+    
+    // Check if we need to show bottom border (if page is very short)
+    manageBorders();
+});

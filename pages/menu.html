@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - The Kantha Kafe</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom Tailwind Config -->
+    <script src="../js/tailwind.config.js"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="../css/global.css">
+    <style>
+        .menu-item {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .menu-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .menu-category-tabs button {
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        .menu-category-tabs button:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: #1C0F13;
+            transition: width 0.3s ease;
+        }
+        .menu-category-tabs button:hover:after,
+        .menu-category-tabs button.active:after {
+            width: 100%;
+        }
+        .menu-category-tabs button.active {
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body class="bg-white min-h-screen relative">
+    <!-- Border -->
+    <div id="border" class="fixed inset-0 pointer-events-none z-50">
+        <!-- Imported border component will be placed here -->
+    </div>
+
+    <!-- Wrapper to position content within borders -->
+    <div class="content-wrapper px-8 md:px-16">
+        <!-- Header -->
+        <header id="header" class="relative z-20">
+            <!-- Imported header component will be placed here -->
+        </header>
+
+        <main class="py-12">
+            <!-- Menu Header -->
+            <div class="text-center mb-16">
+                <h1 class="font-heading text-7xl font-bold mb-6">MENU</h1>
+                <p class="max-w-2xl mx-auto text-center">
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
+                    ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis
+                    parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec,
+                    pellentesque eu, pretium quis, sem.
+                </p>
+            </div>
+
+            <!-- Menu Categories Tabs -->
+            <div class="menu-category-tabs flex justify-center space-x-8 md:space-x-16 mb-16 text-lg font-medium overflow-x-auto pb-2">
+                <button class="active uppercase">Main Dishes</button>
+                <button class="uppercase">Salads</button>
+                <button class="uppercase">Starters</button>
+                <button class="uppercase">Beverages</button>
+                <button class="uppercase">Desserts</button>
+            </div>
+
+            <!-- Bengal Delicacies Section -->
+            <section class="mb-16">
+                <h2 class="text-2xl font-medium mb-10">BENGAL DELICACIES</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Menu Item 1 -->
+                    <div class="menu-item text-center">
+                        <div class="overflow-hidden rounded-lg mb-4">
+                            <img src="/public/images/menu1.png" alt="Mutton Biryani" class="w-full h-64 object-cover" />
+                        </div>
+                        <h3 class="font-medium uppercase">MUTTON BIRYANI</h3>
+                    </div>
+
+                    <!-- Menu Item 2 -->
+                    <div class="menu-item text-center">
+                        <div class="overflow-hidden rounded-lg mb-4">
+                            <img src="/public/images/menu2.png" alt="Kathi Roll" class="w-full h-64 object-cover" />
+                        </div>
+                        <h3 class="font-medium uppercase">KATHI ROLL</h3>
+                    </div>
+
+                    <!-- Menu Item 3 -->
+                    <div class="menu-item text-center">
+                        <div class="overflow-hidden rounded-lg mb-4">
+                            <img src="/public/images/menu3.png" alt="Mutton and Rice" class="w-full h-64 object-cover" />
+                        </div>
+                        <h3 class="font-medium uppercase">MUTTON AND RICE</h3>
+                    </div>
+
+                    <!-- Menu Item 4 -->
+                    <div class="menu-item text-center">
+                        <div class="overflow-hidden rounded-lg mb-4">
+                            <img src="/public/images/menu4.png" alt="Poached Eggs" class="w-full h-64 object-cover" />
+                        </div>
+                        <h3 class="font-medium uppercase">POACHED EGGS</h3>
+                    </div>
+
+                    <!-- Menu Item 5 -->
+                    <div class="menu-item text-center">
+                        <div class="overflow-hidden rounded-lg mb-4">
+                            <img src="/public/images/menu5.png" alt="Fried Eggplant" class="w-full h-64 object-cover" />
+                        </div>
+                        <h3 class="font-medium uppercase">FRIED EGGPLANT</h3>
+                    </div>
+
+                    <!-- Menu Item 6 -->
+                    <div class="menu-item text-center">
+                        <div class="overflow-hidden rounded-lg mb-4">
+                            <img src="/public/images/menu6.png" alt="Fried Fish and Rice" class="w-full h-64 object-cover" />
+                        </div>
+                        <h3 class="font-medium uppercase">FRIED FISH AND RICE</h3>
+                    </div>
+
+                    <!-- Menu Item 7 -->
+                    <div class="menu-item text-center">
+                        <div class="overflow-hidden rounded-lg mb-4">
+                            <img src="/public/images/menu7.png" alt="Mutton Biryani" class="w-full h-64 object-cover" />
+                        </div>
+                        <h3 class="font-medium uppercase">FUSION THALI</h3>
+                    </div>
+
+                    <!-- Menu Item 8 -->
+                    <div class="menu-item text-center">
+                        <div class="overflow-hidden rounded-lg mb-4">
+                            <img src="/public/images/menu8.png" alt="Bengali Thali" class="w-full h-64 object-cover" />
+                        </div>
+                        <h3 class="font-medium uppercase">BENGALI THALI</h3>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Other Cuisines Section -->
+            <section class="mb-16">
+                <h2 class="text-2xl font-medium mb-10">OTHER CUISINES</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Menu Item 1 -->
+                    <div class="menu-item text-center">
+                        <div class="overflow-hidden rounded-lg mb-4">
+                            <img src="/public/images/menu9.png" alt="Basil Pizza" class="w-full h-64 object-cover" />
+                        </div>
+                        <h3 class="font-medium uppercase">BASIL PIZZA</h3>
+                    </div>
+
+                    <!-- Menu Item 2 -->
+                    <div class="menu-item text-center">
+                        <div class="overflow-hidden rounded-lg mb-4">
+                            <img src="/public/images/menu10.png" alt="Pan-Fried Wontons" class="w-full h-64 object-cover" />
+                        </div>
+                        <h3 class="font-medium uppercase">PAN-FRIED WONTONS</h3>
+                    </div>
+
+                    <!-- Menu Item 3 -->
+                    <div class="menu-item text-center">
+                        <div class="overflow-hidden rounded-lg mb-4">
+                            <img src="/public/images/menu11.png" alt="Alfredo Pasta" class="w-full h-64 object-cover" />
+                        </div>
+                        <h3 class="font-medium uppercase">ALFREDO PASTA</h3>
+                    </div>
+
+                    <!-- Menu Item 4 -->
+                    <div class="menu-item text-center">
+                        <div class="overflow-hidden rounded-lg mb-4">
+                            <img src="/public/images/menu12.png" alt="Veggie Sandwich" class="w-full h-64 object-cover" />
+                        </div>
+                        <h3 class="font-medium uppercase">VEGGIE SANDWICH</h3>
+                    </div>
+
+                    <!-- Menu Item 5 -->
+                    <div class="menu-item text-center">
+                        <div class="overflow-hidden rounded-lg mb-4">
+                            <img src="/public/images/menu13.png" alt="Dumpling Ramen" class="w-full h-64 object-cover" />
+                        </div>
+                        <h3 class="font-medium uppercase">DUMPLING RAMEN</h3>
+                    </div>
+
+                    <!-- Menu Item 6 -->
+                    <div class="menu-item text-center">
+                        <div class="overflow-hidden rounded-lg mb-4">
+                            <img src="/public/images/menu14.png" alt="Kung Pao Bao" class="w-full h-64 object-cover" />
+                        </div>
+                        <h3 class="font-medium uppercase">KUNG PAO BAO</h3>
+                    </div>
+
+                    <!-- Menu Item 7 -->
+                    <div class="menu-item text-center">
+                        <div class="overflow-hidden rounded-lg mb-4">
+                            <img src="/public/images/menu15.png" alt="Tempura Sushi" class="w-full h-64 object-cover" />
+                        </div>
+                        <h3 class="font-medium uppercase">TEMPURA SUSHI</h3>
+                    </div>
+
+                    <!-- Menu Item 8 -->
+                    <div class="menu-item text-center">
+                        <div class="overflow-hidden rounded-lg mb-4">
+                            <img src="/public/images/menu16.png" alt="Hibachi Fried Rice" class="w-full h-64 object-cover" />
+                        </div>
+                        <h3 class="font-medium uppercase">HIBACHI FRIED RICE</h3>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Decorative Flower -->
+            
+        </main>
+
+        <!-- Footer -->
+        <footer id="footer" class="relative z-20">
+            <!-- Imported footer component will be placed here -->
+        </footer>
+    </div>
+
+    <!-- JavaScript to Import Components and Manage Borders -->
+    <script>
+        // Adjust paths for components since we're in a subdirectory
+        async function loadComponents() {
+            try {
+                // Load Border
+                const borderResponse = await fetch('../components/border.html');
+                const borderHTML = await borderResponse.text();
+                const borderContainer = document.getElementById('border');
+                if (borderContainer) {
+                    borderContainer.innerHTML = borderHTML;
+                } else {
+                    console.error('Border container not found');
+                }
+
+                // Load Header
+                const headerResponse = await fetch('../components/header.html');
+                const headerHTML = await headerResponse.text();
+                const headerContainer = document.getElementById('header');
+                if (headerContainer) {
+                    headerContainer.innerHTML = headerHTML;
+                } else {
+                    console.error('Header container not found');
+                }
+
+                // Load Footer
+                const footerResponse = await fetch('../components/footer.html');
+                const footerHTML = await footerResponse.text();
+                const footerContainer = document.getElementById('footer');
+                if (footerContainer) {
+                    footerContainer.innerHTML = footerHTML;
+                } else {
+                    console.error('Footer container not found');
+                }
+
+                // Run border management after components load
+                if (typeof manageBorders === 'function') {
+                    manageBorders();
+                }
+            } catch (error) {
+                console.error('Error loading components:', error);
+            }
+        }
+
+        // Category tabs functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            loadComponents();
+            
+            // Add tab switching functionality
+            const tabs = document.querySelectorAll('.menu-category-tabs button');
+            tabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    // Remove active class from all tabs
+                    tabs.forEach(t => t.classList.remove('active'));
+                    // Add active class to clicked tab
+                    this.classList.add('active');
+                    // You could add functionality here to show/hide different menu sections
+                });
+            });
+        });
+    </script>
+    <script src="../js/border.js"></script>
+</body>
+</html>

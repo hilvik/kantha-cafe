@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ambience - The Kantha Kafe</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom Tailwind Config -->
+    <script src="../js/tailwind.config.js"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="../css/global.css">
+</head>
+<body class="bg-white min-h-screen relative">
+    <!-- Border -->
+    <div id="border" class="fixed inset-0 pointer-events-none z-50">
+        <!-- Imported border component will be placed here -->
+    </div>
+
+    <!-- Wrapper to position content within borders -->
+    <div class="content-wrapper px-8 md:px-16">
+        <!-- Header -->
+        <header id="header" class="relative z-20">
+            <!-- Imported header component will be placed here -->
+        </header>
+
+        <main class="py-12">
+            <!-- Ambience Main Section -->
+            <section class="mb-16 flex flex-col items-center">
+                <!-- Image Container First -->
+                <div class="relative w-full mb-16">
+                    <img src="../public/images/1amb.png" alt="Kantha Kafe Interior" class="w-full h-[500px] object-cover rounded-lg" />
+                    <div class="absolute -bottom-6 right-6">
+                        <img src="../public/images/paisley.png" alt="Decorative Paisley" class="w-32 h-32" />
+                    </div>
+                </div>
+                
+                <!-- Text Content Below -->
+                <h1 class="font-heading text-6xl font-bold mb-8 text-center">AMBIENCE</h1>
+                <div class="max-w-3xl mx-auto text-center mb-12">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+                        commodo ligula eget dolor. Aenean massa. Cum sociis natoque
+                        penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                        Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Cafe Interior Section -->
+            <section class="relative max-w-6xl mx-auto px-4 py-8">
+    <!-- Main Cafe Image -->
+    <div class="relative mx-auto max-w-4xl">
+        <img src="../public/images/2amb.png" alt="Cafe Interior" class="w-full object-cover rounded-lg" />
+    </div>
+    
+    <!-- Paisley Decorative Elements -->
+    <div class="absolute top-0 right-0 z-10">
+        <img src="../public/images/paisley.png" alt="Decorative Paisley" class="w-32 h-32 opacity-80" />
+    </div>
+    
+    <div class="absolute left-0 bottom-1/4 z-10">
+        <img src="../public/images/paisley.png" alt="Decorative Paisley" class="w-24 h-24 opacity-80 transform rotate-180" />
+    </div>
+</section>
+
+            <!-- Photo Grid Section -->
+          <section class="mb-16">
+  <div class="max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-3 gap-3 p-2">
+    <!-- Large Cafe Interior (Top-left, spans 2 cols & 2 rows) -->
+    <div class="col-span-2 row-span-2">
+      <img src="../public/images/3amb.png" alt="Cafe Interior" class="w-full h-full object-cover rounded-lg" />
+    </div>
+
+    <!-- Hanging Chair Corner (Top-right) -->
+    <div class="col-span-1">
+      <img src="../public/images/4amb.png" alt="Hanging Chair Corner" class="w-full h-full object-cover rounded-lg" />
+    </div>
+
+    <!-- Cafe Exterior (Bottom-left, spans 2 cols) -->
+    <div class="col-span-2">
+      <img src="../public/images/5amb.png" alt="Cafe Exterior" class="w-full h-full object-cover rounded-lg" />
+    </div>
+
+    <!-- Menu Image (Bottom-right) -->
+    <div class="col-span-1">
+      <img src="../public/images/6amb.png" alt="Cafe Menu" class="w-full h-full object-cover rounded-lg" />
+    </div>
+  </div>
+</section>
+
+
+
+            <!-- Kantha Cafe Exterior Section -->
+            
+
+            
+        </main>
+
+        <!-- Footer -->
+        <footer id="footer" class="relative z-20">
+            <!-- Imported footer component will be placed here -->
+        </footer>
+    </div>
+
+    <!-- JavaScript to Import Components and Manage Borders -->
+    <script>
+        // Adjust paths for components since we're in a subdirectory
+        async function loadComponents() {
+            try {
+                // Load Border
+                const borderResponse = await fetch('../components/border.html');
+                const borderHTML = await borderResponse.text();
+                const borderContainer = document.getElementById('border');
+                if (borderContainer) {
+                    borderContainer.innerHTML = borderHTML;
+                } else {
+                    console.error('Border container not found');
+                }
+
+                // Load Header
+                const headerResponse = await fetch('../components/header.html');
+                const headerHTML = await headerResponse.text();
+                const headerContainer = document.getElementById('header');
+                if (headerContainer) {
+                    headerContainer.innerHTML = headerHTML;
+                } else {
+                    console.error('Header container not found');
+                }
+
+                // Load Footer
+                const footerResponse = await fetch('../components/footer.html');
+                const footerHTML = await footerResponse.text();
+                const footerContainer = document.getElementById('footer');
+                if (footerContainer) {
+                    footerContainer.innerHTML = footerHTML;
+                } else {
+                    console.error('Footer container not found');
+                }
+
+                // Run border management after components load
+                if (typeof manageBorders === 'function') {
+                    manageBorders();
+                }
+            } catch (error) {
+                console.error('Error loading components:', error);
+            }
+        }
+
+        // Load components when the page loads
+        document.addEventListener('DOMContentLoaded', loadComponents);
+    </script>
+    <script src="../js/border.js"></script>
+</body>
+</html>

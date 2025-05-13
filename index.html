@@ -40,19 +40,30 @@
 
 
         <!-- ABOUT US SECTION -->
-        <section class="flex flex-col md:flex-row items-start justify-between mt-24 mb-16 gap-8">
-            <div class="md:w-1/2">
-                <h2 class="text-3xl font-heading mb-4">ABOUT US</h2>
-                <p class="mb-4">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet.
-                </p>
-                <a href="pages/about.html" class="px-6 py-2 bg-gray-200 rounded-full text-sm font-semibold transition hover:bg-gray-300">Learn More &mdash;&mdash;&gt;</a>
-            </div>
-            <div class="md:w-1/2 flex flex-col gap-4">
-                <img src="public/images/about-2.png" alt="About Us" class="rounded-lg object-cover w-full h-[400px] mb-4"/>
-                <img src="public/images/about-1.png" alt="About Us 2" class="rounded-lg object-cover w-full h-[200px]"/>
-            </div>
-        </section>
+        <section class="flex flex-col md:flex-row items-center justify-between mt-24 mb-16 gap-8">
+    <!-- Left side: Text and bottom image -->
+    <div class="md:w-1/2 flex flex-col justify-between h-full">
+        <div class="flex flex-col justify-center mb-6">
+            <h2 class="text-3xl font-heading mb-4">ABOUT US</h2>
+            <p class="mb-4">
+                The Kantha Kafe is a quiet blend of heritage and comfort tucked into a corner of London. 
+                It started with a simple idea: what if a café could feel like home—and also carry the weight of a tradition passed down through generations? Kantha embroidery, a centuries-old craft from Bengal, became our muse. You’ll find it in our cushions, table runners, and even the menu design. 
+                This space isn’t about rushing—it’s about sitting down, noticing the little details, and maybe feeling a bit more connected. Whether you’re here for a quick cup or a long afternoon, we want the warmth to stay with you even after you leave.
+            </p>
+            <a href="pages/about.html" class="px-6 py-2 bg-gray-200 rounded-full text-sm font-semibold transition hover:bg-gray-300 w-max">
+                Learn More &mdash;&mdash;&gt;
+            </a>
+        </div>
+        <img src="public/images/about-1.png" alt="Colorful produce layout" class="rounded-lg object-cover w-full h-[200px]" />
+    </div>
+
+    <!-- Right side: Tall image -->
+    <div class="md:w-1/2">
+        <img src="public/images/about-2.png" alt="Team preparing food" class="rounded-lg object-cover w-full h-[620px]" />
+    </div>
+</section>
+
+
 
         <!-- MENU SECTION -->
         <section class="mt-8 mb-16">
@@ -82,18 +93,24 @@
         </section>
 
         <!-- JOIN OUR WORKSHOP SECTION -->
-        <section class="flex flex-col md:flex-row items-start justify-between mt-16 mb-16 gap-8">
-            <div class="md:w-1/2">
-                <h2 class="text-3xl font-heading mb-4">JOIN OUR WORKSHOP</h2>
-                <p class="mb-6">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
-                </p>
-                <a href="pages/workshop.html" class="px-6 py-2 bg-gray-200 rounded-full text-sm font-semibold transition hover:bg-gray-300">Book Now</a>
-            </div>
-            <div class="md:w-1/2 flex justify-center">
-                <img src="public/images/workshop.png" alt="Workshop" class="rounded-lg object-cover w-full h-[250px]" />
-            </div>
-        </section>
+        <section class="flex flex-col md:flex-row items-center justify-between mt-16 mb-16 gap-12">
+    <!-- Text Content -->
+    <div class="md:w-[45%]">
+        <h2 class="text-3xl font-heading mb-4">JOIN OUR WORKSHOP</h2>
+        <p class="mb-6 text-base leading-relaxed">
+            Our Kantha workshops are about slowing down and making something with your hands. No fancy tools. No pressure. Just a few stitches, a few stories, and maybe a bit of chai. We host regular sessions where anyone—beginner or not—can learn the basics of Kantha, try simple motifs, and take home something personal and handmade. You’ll learn directly from artists who’ve practiced this craft for years. It’s a space to create, to connect, and to step away from screens for a while. All materials are provided—just bring yourself and a little curiosity.
+        </p>
+        <a href="pages/workshop.html" class="px-6 py-2 bg-gray-200 rounded-full text-sm font-semibold transition hover:bg-gray-300">Book Now &mdash;&mdash;&gt;</a>
+    </div>
+
+    <!-- Image -->
+    <div class="md:w-[45%] flex justify-center">
+        <img src="public/images/workshop.png" alt="Workshop" class="rounded-lg object-cover w-[100%] max-w-[600px] h-auto" />
+    </div>
+</section>
+
+
+
 
         <!-- MEET THE ARTISANS SECTION -->
         <section class="flex flex-col md:flex-row items-start justify-between mt-16 mb-24 gap-8">
@@ -103,7 +120,11 @@
             <div class="md:w-1/3 mt-6 md:mt-0">
                 <h2 class="text-3xl font-heading mb-4">MEET THE ARTISANS</h2>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
+                    Kantha isn’t just a craft. It’s a form of storytelling. And the storytellers matter.
+ Our café proudly works with women artisans from rural Bengal—women who’ve grown up stitching memories, seasons, and symbols into old saris. Every piece we showcase, every product we sell, has a face and a voice behind it.
+ We believe in fair collaboration, not charity. Our artisans set their prices, choose their designs, and share their stories in their own words.
+ In this section, you can meet them, read about their journeys, and see how your support helps keep their work—and independence—alive.
+
                 </p>
             </div>
         </section>

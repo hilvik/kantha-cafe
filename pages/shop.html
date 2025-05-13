@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - The Kantha Kafe</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom Tailwind Config -->
+    <script src="../js/tailwind.config.js"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="../css/global.css">
+    <style>
+        .shop-item {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .shop-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .shop-category-tabs button {
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        .shop-category-tabs button:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: #1C0F13;
+            transition: width 0.3s ease;
+        }
+        .shop-category-tabs button:hover:after,
+        .shop-category-tabs button.active:after {
+            width: 100%;
+        }
+        .shop-category-tabs button.active {
+            font-weight: 700;
+        }
+        .filter-dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .pagination a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+        .pagination a:hover, .pagination a.active {
+            background-color: #f3f4f6;
+        }
+        .pagination a.active {
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body class="bg-white min-h-screen relative">
+    <!-- Border -->
+    <div id="border" class="fixed inset-0 pointer-events-none z-50">
+        <!-- Imported border component will be placed here -->
+    </div>
+
+    <!-- Wrapper to position content within borders -->
+    <div class="content-wrapper px-8 md:px-16">
+        <!-- Header -->
+        <header id="header" class="relative z-20">
+            <!-- Imported header component will be placed here -->
+        </header>
+
+        <main class="py-12">
+           <!-- Shop Header -->
+<div class="relative w-full h-[600px] mb-16">
+    <!-- Background Image -->
+    <div class="w-full h-full">
+        <img src="../public/images/shop1.png" 
+             alt="Close up of intricate embroidery work" 
+             class="w-full h-full object-cover brightness-95" />
+    </div>
+    
+    <!-- Shop Now Button (positioned over the image) -->
+    <div class="absolute left-8 bottom-12">
+        <a href="#shop-items" 
+           class="group inline-flex items-center px-6 py-3 bg-white/90 rounded-full text-sm font-medium tracking-wider hover:bg-white transition-all duration-300">
+            SHOP NOW 
+            <span class="ml-2 font-light">→</span>
+        </a>
+    </div>
+</div>
+            <!-- Shop Categories Tabs -->
+            <div class="shop-category-tabs flex justify-center space-x-8 md:space-x-10 mb-16 text-lg font-medium overflow-x-auto pb-2">
+                <button class="active uppercase">Men</button>
+                <button class="uppercase">Women</button>
+                <button class="uppercase">Home Decor</button>
+                <button class="uppercase">Accessories</button>
+                <button class="uppercase">Others</button>
+            </div>
+
+            <!-- Filter Section -->
+            <div class="flex justify-between items-center mb-8">
+                <div>
+                    <span class="font-medium">FILTER:</span>
+                    <select class="ml-2 py-1 px-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-gray-200">
+                        <option>All Items</option>
+                        <option>Floral</option>
+                        <option>Chanderi</option>
+                        <option>Kantha</option>
+                        <option>Patchwork</option>
+                    </select>
+                </div>
+                <div>
+                    <span class="font-medium">Sort By -</span>
+                    <select class="ml-2 py-1 px-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-gray-200">
+                        <option>Newest</option>
+                        <option>Price: Low to High</option>
+                        <option>Price: High to Low</option>
+                        <option>Best Selling</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Shop Items Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                <!-- Shop Item 1 -->
+                <div class="shop-item text-center">
+                    <div class="overflow-hidden rounded-lg mb-4">
+                        <img src="../public/images/shop2.png" alt="Floral Chanderi Kantha Saree" class="w-full h-80 object-cover" />
+                    </div>
+                    <h3 class="font-medium uppercase">FLORAL CHANDERI KANTHA SAREE</h3>
+                </div>
+
+                <!-- Shop Item 2 -->
+                <div class="shop-item text-center">
+                    <div class="overflow-hidden rounded-lg mb-4">
+                        <img src="../public/images/shop3.png" alt="Patchwork Reversible Kantha Coat" class="w-full h-80 object-cover" />
+                    </div>
+                    <h3 class="font-medium uppercase">PATCHWORK REVERSIBLE KANTHA COAT</h3>
+                </div>
+
+                <!-- Shop Item 3 -->
+                <div class="shop-item text-center">
+                    <div class="overflow-hidden rounded-lg mb-4">
+                        <img src="../public/images/shop4.png" alt="Patchwork Kantha Blouse" class="w-full h-80 object-cover" />
+                    </div>
+                    <h3 class="font-medium uppercase">PATCHWORK KANTHA BLOUSE</h3>
+                </div>
+
+                <!-- Shop Item 4 -->
+                <div class="shop-item text-center">
+                    <div class="overflow-hidden rounded-lg mb-4">
+                        <img src="../public/images/shop5.png" alt="Hand Embroidered Saree" class="w-full h-80 object-cover" />
+                    </div>
+                    <h3 class="font-medium uppercase">HAND EMBROIDERED SAREE</h3>
+                </div>
+
+                <!-- Shop Item 5 -->
+                <div class="shop-item text-center">
+                    <div class="overflow-hidden rounded-lg mb-4">
+                        <img src="../public/images/shop6.png" alt="Handwork Kanta Saree" class="w-full h-80 object-cover" />
+                    </div>
+                    <h3 class="font-medium uppercase">HANDWORK KANTA SAREE</h3>
+                </div>
+
+                <!-- Shop Item 6 -->
+                <div class="shop-item text-center">
+                    <div class="overflow-hidden rounded-lg mb-4">
+                        <img src="../public/images/shop7.png" alt="Kantha Coat" class="w-full h-80 object-cover" />
+                    </div>
+                    <h3 class="font-medium uppercase">KANTHA COAT</h3>
+                </div>
+
+                <!-- Shop Item 7 -->
+                <div class="shop-item text-center">
+                    <div class="overflow-hidden rounded-lg mb-4">
+                        <img src="../public/images/shop8.png" alt="Kantha Coat" class="w-full h-80 object-cover" />
+                    </div>
+                    <h3 class="font-medium uppercase">KANTHA COAT</h3>
+                </div>
+
+                <!-- Shop Item 8 -->
+                <div class="shop-item text-center">
+                    <div class="overflow-hidden rounded-lg mb-4">
+                        <img src="../public/images/shop9.png" alt="Kantha Tussar Saree" class="w-full h-80 object-cover" />
+                    </div>
+                    <h3 class="font-medium uppercase">KANTHA TUSSAR SAREE</h3>
+                </div>
+
+                <!-- Shop Item 9 -->
+                <div class="shop-item text-center">
+                    <div class="overflow-hidden rounded-lg mb-4">
+                        <img src="../public/images/shop10.png" alt="Kantha Patch Blouse" class="w-full h-80 object-cover" />
+                    </div>
+                    <h3 class="font-medium uppercase">KANTHA PATCH BLOUSE</h3>
+                </div>
+
+                <!-- Shop Item 10 -->
+                <div class="shop-item text-center">
+                    <div class="overflow-hidden rounded-lg mb-4">
+                        <img src="../public/images/shop11.png" alt="Reversible Jacket" class="w-full h-80 object-cover" />
+                    </div>
+                    <h3 class="font-medium uppercase">REVERSIBLE JACKET</h3>
+                </div>
+
+                <!-- Shop Item 11 -->
+                <div class="shop-item text-center">
+                    <div class="overflow-hidden rounded-lg mb-4">
+                        <img src="../public/images/shop12.png" alt="Kantha Lower" class="w-full h-80 object-cover" />
+                    </div>
+                    <h3 class="font-medium uppercase">KANTHA LOWER</h3>
+                </div>
+
+                <!-- Shop Item 12 -->
+                <div class="shop-item text-center">
+                    <div class="overflow-hidden rounded-lg mb-4">
+                        <img src="../public/images/shop13.png" alt="Kantha Saree" class="w-full h-80 object-cover" />
+                    </div>
+                    <h3 class="font-medium uppercase">KANTHA SAREE</h3>
+                </div>
+            </div>
+
+            <!-- Pagination -->
+            <div class="flex justify-center items-center space-x-2 mb-16">
+                <div class="pagination flex space-x-1">
+                    <a href="#" class="active">1</a>
+                    <a href="#">2</a>
+                    <a href="#">3</a>
+                    <a href="#">4</a>
+                    <a href="#">&gt;</a>
+                    <span>. . . . .</span>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer id="footer" class="relative z-20">
+            <!-- Imported footer component will be placed here -->
+        </footer>
+    </div>
+
+    <!-- JavaScript to Import Components and Manage Borders -->
+    <script>
+        // Adjust paths for components since we're in a subdirectory
+        async function loadComponents() {
+            try {
+                // Load Border
+                const borderResponse = await fetch('../components/border.html');
+                const borderHTML = await borderResponse.text();
+                const borderContainer = document.getElementById('border');
+                if (borderContainer) {
+                    borderContainer.innerHTML = borderHTML;
+                } else {
+                    console.error('Border container not found');
+                }
+
+                // Load Header
+                const headerResponse = await fetch('../components/header.html');
+                const headerHTML = await headerResponse.text();
+                const headerContainer = document.getElementById('header');
+                if (headerContainer) {
+                    headerContainer.innerHTML = headerHTML;
+                } else {
+                    console.error('Header container not found');
+                }
+
+                // Load Footer
+                const footerResponse = await fetch('../components/footer.html');
+                const footerHTML = await footerResponse.text();
+                const footerContainer = document.getElementById('footer');
+                if (footerContainer) {
+                    footerContainer.innerHTML = footerHTML;
+                } else {
+                    console.error('Footer container not found');
+                }
+
+                // Run border management after components load
+                if (typeof manageBorders === 'function') {
+                    manageBorders();
+                }
+            } catch (error) {
+                console.error('Error loading components:', error);
+            }
+        }
+
+        // Category tabs functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            loadComponents();
+            
+            // Add tab switching functionality
+            const tabs = document.querySelectorAll('.shop-category-tabs button');
+            tabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    // Remove active class from all tabs
+                    tabs.forEach(t => t.classList.remove('active'));
+                    // Add active class to clicked tab
+                    this.classList.add('active');
+                    // You could add functionality here to show/hide different shop categories
+                });
+            });
+        });
+    </script>
+    <script src="../js/border.js"></script>
+</body>
+</html>
